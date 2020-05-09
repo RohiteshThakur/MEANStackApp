@@ -1,4 +1,4 @@
-node('any') {
+node {
   stage('SCM') {
     checkout poll: false, scm: [$class: 'GitSCM', branches: [[name: 'refs/heads/develop']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/RohiteshThakur/MEANStackApp.git']]]
   }
